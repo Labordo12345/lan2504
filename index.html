@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My calculator</title>
+    
+</head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(223, 214, 214);
+            border: 100pt;
+            box-shadow: 150px(Black);
+            padding: 10px;
+            height: 10;
+            width: 10;
+        }
+  </style>      
+
+<body> 
+    <input type ="text" name="" id="display">
+        <br>
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        
+        <br>
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        
+        <br>
+        <button onclick="append(7)">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <br>
+        <button onclick="append('+')">+</button>
+        <button onclick="append('-')">-</button> 
+        <button onclick="append('*')">*</button>
+        <br>
+        <button onclick="append('/')">/</button>
+        <button onclick="compute()">=</button>
+        <button onclick="clear()">C</button>
+
+ <script>
+     const display = document.getElementById("display") 
+     function append(value){
+         display.value += value
+     }
+     function compute(){
+         display.value=eval(display.value)
+     }
+     function clears(){
+         display.value ='';
+     }
+     
+       
+ </script>
+ </body>
+ </html>
